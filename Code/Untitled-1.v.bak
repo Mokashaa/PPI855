@@ -1,0 +1,100 @@
+module PPI8255 (PORTA,PORTB,PORTCU,PORTCL,PORTD,RD,WR,CS,A0,A1,Reset);
+
+//Ports A,B,C, and Data bus D;
+inout [7:0] PORTA;
+inout [7:0] PORTB;
+inout [3:0] PORTCU;
+inout [3:0] PORTCL;
+inout [7:0] PORTD;
+
+//registers of the Ports andaaa the data bus;
+reg [7:0] A;
+reg [7:0] B;
+reg [3:0] CU;
+reg [3:0] CL;
+reg [7:0] D;
+reg [7:0] DataBus;
+reg [7:0] CNTRLREG;
+
+
+integer DoneRD=0;
+integer RDnotWR=0;
+//Control Pins;
+input Reset, A0, A1, RD, WR, CS;
+
+assign PORTA = (CNTRLREG[4]==1'b0)? A : 8'bzzzzzzzz;
+assign PORTB = (CNTRLREG[1]==1'b0)? B : 8'bzzzzzzzz;
+assign PORTCU = (CNTRLREG[3]==1'b0)? CU : 8'bzzzzzzzz;
+assign PORTCL = (CNTRLREG[0]==1'b0)? CL : 8'bzzzzzzzz;
+assign PORTD = (RDnotWR==1)? D : 8'bzzzzzzzz;
+
+
+
+
+
+always @ (PORTA,PORTB,PORTCU,PORTCL,PORTD,RD,WR,CS,A0,A1,Reset)
+begin
+if(!CS)
+begin//1
+
+if ( (A0 == 1) && (A1 == 1) &&(!WR))
+begin
+CNTRLREG<=PORTD;
+end
+if (CNTRLREG[7]==0) //BSR
+begin
+
+casex (CNTRLREG)
+8'bxxxx000x:CL[0]<=CNTRLREG[0];
+8'bxxxx001x:CL[1]<=CNTRLREG[0];
+8'bxxxx010x:CL[2]<=CNTRLREG[0];
+8'bxxxx011x:CL[3]<=CNTRLREG[0];
+8'bxxxx100x:CU[0]<=CNTRLREG[0];
+8'bxxxx101x:CU[1]<=CNTRLREG[0];
+8'bxxxx110x:CU[2]<=CNTRLREG[0];
+8'bxxxx111x:CU[3]<=CNTRLREG[0];
+
+endcase
+
+
+end
+else //MODE 0
+begin 
+ if (!WR)//2
+   begin //write
+   RDnotWR<=0;
+   DataBus<=PORTD;
+   
+   if ( (A0 == 0) && (A1 == 0) && (CNTRLREG[4]==1'b0)  )
+   begin
+   A<=DataBus;
+    end
+   else if ( (A0 == 0) && (A1 == 1) && (CNTRLREG[1]==1'b0) )
+   begin
+   B<=DataBus;
+
+   end
+else if ( (A0 == 1) && (A1 == 0) &&(CNTRLREG[0]==1'b0) )
+begin
+CL<=DataBus;
+
+end
+else if ( (A0 == 1) && (A1 == 0) &&(CNTRLREG[3]==1'b0) )
+begin
+CU<=DataBus;
+
+end
+
+  
+
+end//write 
+
+
+
+
+end //EndMode 0 
+
+end//1
+end //alwaysBlock
+
+endmodule 

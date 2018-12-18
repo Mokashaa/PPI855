@@ -1,0 +1,12 @@
+{E:/3rd Year/CO/project/code.v} {1 {vlog -work work -stats=none {E:/3rd Year/CO/project/code.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module PPI8255
+-- Compiling module tb_ppi_ic
+-- Compiling module fsm_report
+-- Compiling module FSM_tb
+
+Top level modules:
+	tb_ppi_ic
+	FSM_tb
+
+} {} {}}

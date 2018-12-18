@@ -1,0 +1,205 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/ProjectModelsim
+vfsm_report
+Z0 !s110 1544557598
+!i10b 1
+!s100 3HF?1cHL]VYj66YL6SO>01
+IWUz;[kD?h?9eV7jeJI8H31
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/3rd Year/CO/project
+Z3 w1544557592
+Z4 8E:/3rd Year/CO/project/code.v
+Z5 FE:/3rd Year/CO/project/code.v
+L0 875
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1544557598.000000
+Z8 !s107 E:/3rd Year/CO/project/code.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|E:/3rd Year/CO/project/code.v|
+!s101 -O0
+!i113 1
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vFSM_tb
+R0
+!i10b 1
+!s100 e<8oS`Ng;B^Y?D]7GP;PY0
+IeNHF87fDE=Y8]]TY4?aRW1
+R1
+R2
+R3
+R4
+R5
+L0 951
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@f@s@m_tb
+vInOut
+Z11 !s110 1543001230
+!i10b 1
+!s100 ND]B;HkcNhnO_LKaHCh:i1
+IoVUWl@V=e[1A:n]9aU@4<1
+R1
+R2
+Z12 w1543001227
+R4
+R5
+L0 46
+R6
+r1
+!s85 0
+31
+Z13 !s108 1543001230.000000
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@in@out
+vInOutTestBench
+R11
+!i10b 1
+!s100 T_VFbD^7XR^jc7Lm[MS[?0
+Ioh29bQ2Ii<80a8LPALfW;2
+R1
+R2
+R12
+R4
+R5
+L0 54
+R6
+r1
+!s85 0
+31
+R13
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@in@out@test@bench
+vPort_8bit
+Z14 !s110 1543067554
+!i10b 1
+!s100 FZ@Y97>OUkh9:JJHo:]IQ1
+IG]NNiBNbX^K0c=H8z:FIQ2
+R1
+R2
+Z15 w1543067551
+R4
+R5
+L0 34
+R6
+r1
+!s85 0
+31
+Z16 !s108 1543067554.000000
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@port_8bit
+vPORT_tb
+R14
+!i10b 1
+!s100 fBP>GM^ICDDG;;I:`KhUA1
+IgooG6DC^3R:dYE:::[<LS2
+R1
+R2
+R15
+R4
+R5
+L0 60
+R6
+r1
+!s85 0
+31
+R16
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@p@o@r@t_tb
+vPPI8255
+R0
+!i10b 1
+!s100 7lJjJ_K9;hZ>gY]c=1oH<1
+IG5mUUZPEc39Gl2[Z0Ifef0
+R1
+R2
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@p@p@i8255
+vtb_ppi_ic
+R0
+!i10b 1
+!s100 eYg=FlB4@6N12^H`LJ>Ij1
+IEKZ]11hHaCb?FFHamb[[b2
+R1
+R2
+R3
+R4
+R5
+L0 162
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vtb_ppi_ic1
+!s110 1543404758
+!i10b 1
+!s100 hEG_9NFe^k>?86c6UdOh`3
+ImU16zmEV=^^YPb8gLiCSj0
+R1
+R2
+w1543404756
+R4
+R5
+L0 756
+R6
+r1
+!s85 0
+31
+!s108 1543404757.000000
+R8
+R9
+!s101 -O0
+!i113 1
+R10
